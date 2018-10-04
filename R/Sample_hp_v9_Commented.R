@@ -939,12 +939,20 @@ stop("\n",'---Number of selected dams in argument "Selection" is less than avail
 }
 
 No_off_per_sire<-x/length(sires)
-# No_off_per_sire
-No_mat_per_sire<-No_off_per_sire/litter_size
-# No_mat_per_sire
+
+No_mat_per_sire<-length(dams)
+
 No_off_per_dam<-litter_size
+
+No_mat_per_dam<-length(sires)
+
+#No_off_per_sire<-x/length(sires)
+# No_off_per_sire
+#No_mat_per_sire<-No_off_per_sire/litter_size
+# No_mat_per_sire
+#No_off_per_dam<-litter_size
 # No_off_per_dam
-No_mat_per_dam<-1
+#No_mat_per_dam<-1
 # No_mat_per_dam	
 
 # Create id,sire,dam,generation,sex,env
