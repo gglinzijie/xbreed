@@ -938,13 +938,13 @@ stop("\n",'---Number of selected dams in argument "Selection" is less than avail
 ,"\n",'Solution 2: Decrease number of selected dams.')
 }
 
-No_off_per_sire<-x/length(sires)
+No_off_per_sire<-litter_size
 
-No_mat_per_sire<-length(dams)
+No_mat_per_sire<-length(dams)*length(dams)
 
 No_off_per_dam<-litter_size
 
-No_mat_per_dam<-length(sires)
+No_mat_per_dam<-length(sires)*length(dams)
 
 #No_off_per_sire<-x/length(sires)
 # No_off_per_sire
