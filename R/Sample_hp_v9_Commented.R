@@ -972,8 +972,8 @@ id  <- id1:id2
 #} else
 #sire<-sample(sires,x,replace=TRUE)
 #dam <- rep(dams,each=No_off_per_dam)
-sire<-rep(sire, each=(No_off_per_sire*length(dams)))
-dam<-rep(rep(dam,each=No_off_per_dam),length(sires))
+sire<-rep(sires, each=(No_off_per_sire*length(dams)))
+dam<-rep(rep(dams,each=No_off_per_dam),length(sires))
 generation <-gene_counter +1 
 sex <-sample(c('F','M'),x,replace=T)
 env <-rnorm(x,mean=0,sd=sqrt(vv))
