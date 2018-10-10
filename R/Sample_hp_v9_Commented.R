@@ -206,7 +206,7 @@
 
 
 # keep wrapping for later on
-sample_hp<-function(hp_out,Male_founders,Female_founders,ng,litter_size,Selection,Training,saveAt,sh_output,Display) {
+sample_hp<-function(hp_out,Male_founders,Female_founders,ng,litter_size_founders,Training,saveAt,sh_output,Display) {
 
 
  # # loading .dll this will be removed in the package
@@ -938,22 +938,9 @@ stop("\n",'---Number of selected dams in argument "Selection" is less than avail
 ,"\n",'Solution 2: Decrease number of selected dams.')
 }
 
-No_off_per_sire<-litter_size
 
-No_mat_per_sire<-length(dams)*length(dams)
 
-No_off_per_dam<-litter_size
 
-No_mat_per_dam<-length(sires)*length(dams)
-
-#No_off_per_sire<-x/length(sires)
-# No_off_per_sire
-#No_mat_per_sire<-No_off_per_sire/litter_size
-# No_mat_per_sire
-#No_off_per_dam<-litter_size
-# No_off_per_dam
-#No_mat_per_dam<-1
-# No_mat_per_dam	
 
 # Create id,sire,dam,generation,sex,env
 # id1 <- (counter_id+1)
@@ -972,8 +959,11 @@ id  <- id1:id2
 #} else
 #sire<-sample(sires,x,replace=TRUE)
 #dam <- rep(dams,each=No_off_per_dam)
-sire<-rep(sires, each=(No_off_per_sire))
-dam<-rep(rep(dams,each=(No_off_per_dam/length(dams))),length(sires))
+
+No_mat<-length(dams)*length(dams)
+
+sire<-rep(rep(sires, each=(length(dams))),litter_size_founders)
+dam<-rep(rep(dams,length(sires)),litter_size_founders)
 generation <-gene_counter +1 
 sex <-sample(c('F','M'),x,replace=T)
 env <-rnorm(x,mean=0,sd=sqrt(vv))
