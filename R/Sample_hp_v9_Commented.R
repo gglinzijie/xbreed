@@ -206,7 +206,7 @@
 
 
 # keep wrapping for later on
-sample_hp<-function(hp_out,Male_founders,Female_founders,ng,litter_size_founders,Selection,Training,saveAt,sh_output,Display) {
+sample_hp<-function(hp_out,Male_founders,Female_founders,ng,litter_size,Selection,Training,saveAt,sh_output,Display) {
 
 
  # # loading .dll this will be removed in the package
@@ -962,8 +962,8 @@ id  <- id1:id2
 
 No_mat<-length(dams)*length(dams)
 
-sire<-rep(rep(sires, each=(length(dams))),litter_size_founders)
-dam<-rep(rep(dams,length(sires)),litter_size_founders)
+sire<-rep(rep(sires, each=(length(dams))),litter_size)
+dam<-rep(rep(dams,length(sires)),litter_size)
 generation <-gene_counter +1 
 sex <-sample(c('F','M'),x,replace=T)
 env <-rnorm(x,mean=0,sd=sqrt(vv))
