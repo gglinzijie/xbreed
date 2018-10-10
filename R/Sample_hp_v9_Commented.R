@@ -206,7 +206,7 @@
 
 
 # keep wrapping for later on
-sample_hp<-function(hp_out,Male_founders,Female_founders,ng,litter_size_founders,Training,saveAt,sh_output,Display) {
+sample_hp<-function(hp_out,Male_founders,Female_founders,ng,litter_size_founders,Selection,Training,saveAt,sh_output,Display) {
 
 
  # # loading .dll this will be removed in the package
