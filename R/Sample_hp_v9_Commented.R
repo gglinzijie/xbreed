@@ -396,7 +396,7 @@ cat('Controlling input data ...',fill=TRUE)
 		stop("\n",'Solution 1: Increase litter size.',"\n",'Solution 2: Decrease size of training.',"\n",'Solution 3: Increase number of dmas selected.')		
 		}
 		
-		if(tra_size>(litter_size*Female_founders[1]*Male_founders[1]){
+		if(tra_size>(litter_size*Female_founders[1]*Male_founders[1])){
 		avai<-litter_size*as.numeric(Female_founders[1])*as.numeric(Male_founders[1])
 		cat('\n','---Training size:',tra_size,' in argument "Training" is grater than number of available individuals:',avai,fill=TRUE)
 		stop("\n",'Solution 1: Increase litter size.',"\n",'Solution 2: Decrease size of training.',"\n",'Solution 3: Increase size in Female_founders.')		
