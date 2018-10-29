@@ -717,6 +717,18 @@ index<-match(ID_sires_toC,index_sires)
 	index<-match(ID_sires_toC[,1],index_sires)
 	}
 
+} else if (Males[,3]=='gebv'){
+	if(Males[,4]=='h'){
+	sorted_sire_data<-provided_sire_data[order(-provided_sire_data[,9]), ]
+	ID_sires_toC<-sorted_sire_data[1:Males[,1],]
+	index<-match(ID_sires_toC[,1],index_sires)
+	}
+		if(Males[,4]=='l'){
+	sorted_sire_data<-provided_sire_data[order(provided_sire_data[,9]), ]
+	ID_sires_toC<-sorted_sire_data[1:Males[,1],]
+	index<-match(ID_sires_toC[,1],index_sires)
+	}
+
 }
 
 sires_toC_data<-provided_sire_data[index,]
@@ -770,6 +782,18 @@ index<-match(ID_dams_toC,index_dams)
 	}
 		if(Females[,4]=='l'){
 	sorted_sire_data<-provided_dam_data[order(provided_dam_data[,8]), ]
+	ID_dams_toC<-sorted_sire_data[1:Females[,1],]
+	index<-match(ID_dams_toC[,1],index_dams)
+	}
+
+} else if (Females[,3]=='gebv'){
+	if(Females[,4]=='h'){
+	sorted_sire_data<-provided_dam_data[order(-provided_dam_data[,9]), ]
+	ID_dams_toC<-sorted_sire_data[1:Females[,1],]
+	index<-match(ID_dams_toC[,1],index_dams)
+	}
+		if(Females[,4]=='l'){
+	sorted_sire_data<-provided_dam_data[order(provided_dam_data[,9]), ]
 	ID_dams_toC<-sorted_sire_data[1:Females[,1],]
 	index<-match(ID_dams_toC[,1],index_dams)
 	}
