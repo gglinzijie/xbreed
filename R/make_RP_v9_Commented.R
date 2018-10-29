@@ -220,7 +220,7 @@
 
 #sh_out2 for female founder
 # keep wrapping for later on
-make_rp_half<-function(sh_out,sh_out2,Male_founders,Female_founders,ng,litter_size,Selection,Training,saveAt,rp_output,Display) {
+make_rp<-function(sh_out,sh_out2,Male_founders,Female_founders,ng,litter_size,Selection,Training,saveAt,rp_output,Display) {
 
 # dyn.load('sh.dll')
 # is.loaded("sh")
@@ -296,7 +296,7 @@ cat('Controlling input data ...',fill=TRUE)
 	outforLD2<-sh_out2
 
 
-	tst<-outforLD$output[[(Female_founders[,2]+1)]]$data
+	tst<-outforLD2$output[[(Female_founders[,2]+1)]]$data
 	t_mad<-subset(tst,tst[,5]=='F')
 	t_mad<-length(t_mad[,5])
 
