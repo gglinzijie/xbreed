@@ -977,7 +977,7 @@ bb4<-subset(total_B$sequ,total_B$sequ[,2]==gene_counter)
 		females_selected<-females[1:Selection[2,1],]
 			}
     	}
-		x<-Selection[2,1]*Selection[2,2]*litter_size
+		x<-Selection[2,1]*Selection[1,1]*litter_size
 }
 
 cat('.')
