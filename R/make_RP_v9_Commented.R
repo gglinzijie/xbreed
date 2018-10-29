@@ -889,7 +889,7 @@ bb4<-subset(total_B$sequ,total_B$sequ[,2]==gene_counter)
 	# selection of females and then top females
 	females<-subset(bb1,bb1[,5]=='F')
     females_selected<-females
-	x<-length(females_selected[,1])*litter_size
+	x<-length(females_selected[,1])*length(males_selected[,1])*litter_size
 	}
 
 	 if (gene_counter >0){
@@ -977,7 +977,7 @@ bb4<-subset(total_B$sequ,total_B$sequ[,2]==gene_counter)
 		females_selected<-females[1:Selection[2,1],]
 			}
     	}
-		x<-Selection[2,1]*litter_size
+		x<-Selection[2,1]*Selection[2,2]*litter_size
 }
 
 cat('.')
