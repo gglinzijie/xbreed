@@ -220,7 +220,7 @@
 
 #sh_out2 for female founder
 # keep wrapping for later on
-make_rp<-function(sh_out,sh_out2,Male_founders,Female_founders,ng,litter_size,Selection,Training,saveAt,rp_output,Display) {
+make_rp<-function(sh_out,sh_out2,Male_founders,Female_founders,ng,litter_size,Selection,Training,saveAt,rp_output,Display,genome1,genome2) {
 
 # dyn.load('sh.dll')
 # is.loaded("sh")
@@ -1111,7 +1111,7 @@ cat('.')
 		# MALES
 		For_recom_males<-list()
     	 for (chr_counter in 1:nchr){
-			nrec<-rpois(length(locii_sires_npos[,1]),chrom_length[chr_counter]/100)
+			nrec<-rpois(length(locii_sires_npos[,1]),genome1[chr_counter]/100)
 			nrec[nrec==0]=1
 			nrec
 			matri_rec<-matrix(-1,nrow=length(locii_sires_npos[,1]),ncol=(max(nrec)))
@@ -1170,7 +1170,7 @@ cat('.')
 		# FEMALES
 		For_recom_females<-list()
 		 for (chr_counter in 1:nchr){
-			nrec<-rpois(length(locii_dams_npos[,1]),chrom_length[chr_counter]/100)
+			nrec<-rpois(length(locii_dams_npos[,1]),genome2[chr_counter]/100)
 			nrec[nrec==0]=1
 			nrec
 			matri_rec<-matrix(-1,nrow=length(locii_dams_npos[,1]),ncol=(max(nrec)))
